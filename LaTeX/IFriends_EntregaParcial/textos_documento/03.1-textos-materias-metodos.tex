@@ -1,0 +1,61 @@
+% ------------------------------------------------------------
+\section{Materiais e Métodos}
+% ------------------------------------------------------------
+Segundo \citeonline{Junior:2010}, engenharia de \textsl{software} é ``um conjunto integrado de métodos e ferramentas utilizadas para especificar, projetar, implementar e manter um sistema'', e que, para tanto, reúne em si metodologias, métodos e ferramentas para que o projeto seja bem definido em todas as suas etapas, variando desde sua problemática inicial e indo até sua entrega enquanto um produto de \textsl{software}. É a partir disto, que \citeonline{Junior:2010} distingue um método de uma ferramenta:
+
+\begin{citacao}
+Um método é uma prescrição explícita de como chegar a uma atividade requerida por um modelo de ciclo de vida, visando otimizar a execução das atividades que foram especificadas. Já as ferramentas proporcionam apoio automatizado ou semi-automatizado aos métodos\cite{Junior:2010}.
+\end{citacao}
+
+Ademais, \citeonline{Junior:2010} ainda separa os métodos de desenvolvimento de sistema em três categoriais que permitem visualizar e solucionar o problema de diferentes maneiras para sua modelagem. Para a composição do presente projeto, no entanto, será utilizado como método principal a metodologia escolhida para a gestão do projeto e as ferramentas poderão ou não ser relacionadas a mesma, como há de ser especificado nas próximas seções.
+
+%-------------------------------------------------------------
+\subsection{Tecnologias e ferramentas de desenvolvimento}
+%-------------------------------------------------------------
+Pensando no objetivo e alcance do projeto, foi decidida criação de uma aplicação Web, a qual pode ser acessada de diferentes dispositivos de forma fácil, apenas sendo tem como requisito básico o acesso à Internet. Outros fatores considerados são a experiência da equipe com o formato, os recursos computacionais exigidos para tal desenvolvimento (sendo menores do que para desenvolvimento de aplicações móveis) e a maior disponibilidade de conteúdos gratuitos e de fácil acesso sobre desenvolvimento Web.
+
+De modo a desenvolver essa aplicação, considerou-se o uso do \gls{framework2} JavaScript e ReactJs como base para o \textsl{\gls{front-end}}, já as bibliotecas estilísticas que servirão de auxílio serão o \gls{react-bootstrap} e o \gls{ant}.
+
+Além disso, para a internacionalização, faz-se uso da biblioteca de uso livre, a  \href{https://www.i18next.com}{i18n}, escrita em JavaScript e disponível como uma dependência no ReactJs. Essa biblioteca possui muitas funcionalidades e possibilidades de uso, porém a utilizamos para internacionalizar o site, com ela é possível traduzir texto para idiomas diversos, escolher a linguagem padrão do navegador do usuário e várias outras possibilidades.
+
+Quanto ao banco de imagens da aplicação, utilizamos o \href{https://pt-br.imgbb.com}{imgBB}, o qual é uma plataforma de hospedagem de imagens grátis, com ela é possível enviar uma requisição a \acs{api} do \href{https://pt-br.imgbb.com}{imgBB}, que junto de uma chave própria do usuário é possível fazer a inserção, edição, visualização e exclusão das fotos. Ele também nos fornece os links das imagens, o que permite que salvemos no nosso banco de dados apenas os links das fotos enviadas pelo usuário.
+
+Para o \textsl{\gls{back-end}} foi considerada a linguagem Java, orientada a objetos; sua escolha foi feita pelo fato da equipe já possuir experiência com a linguagem, além de alguns já trabalharem com a mesma, ela também possui uma boa maturidade, contendo muitas informações disponíveis para ajudar no desenvolvimento. Em conjunto, será utilizado \textit{Spring Boot}: \gls{framework2} Java de código aberto, e será juntamente usado o \gls{Maven}: \gls{framework2} de automação e gerenciamento de dependências no projeto.  Já como padrão de desenvolvimento utilizado no  \textsl{\gls{back-end}}, será aplicado o padrão \acs{mvc}, que separa o projeto em três principais camadas, \textit{model}, \textit{view} e \textit{controller}.
+
+No entanto, como arquitetura de sistema (\autoref{Arquitetura_Rest_API}), foi escolhido utilizar a arquitetura \gls{REST API} na qual é possível separar o código \textsl{\gls{back-end}} do \textsl{\gls{front-end}} de maneira que as duas aplicações possam determinar a troca informações entre elas com requisições via protocolo \acs{http}. Está solução também é útil para escalonar a plataforma, já que a utilização de uma \acs{api} pode ser feita tanto por aplicações móveis, como para a Web.
+
+\begin{figure}[htb]
+\centering
+\caption{Arquitetura REST API}
+\label{Arquitetura_Rest_API}
+\includegraphics[width=1.0\textwidth]{anexos/Imagens_Diagramas/Arquitetura-Rest-API.png}
+\fonte{Os autores.}
+\end{figure}
+\FloatBarrier
+
+Quanto ao banco de dados, foi utilizado o \gls{postegreSQL}: um \acs{sgbd} popular de \acs{sql}, que serve para executar comandos no banco, como consultas, e alterações nos dados ou na estrutura.
+
+Para hospedar a aplicação, esta se usando o \gls{heroku}, o qual é uma plataforma de nuvem que suporta diversas linguagens, que permite a implantação, escalonamento e gerenciamento do sistema.
+
+%-------------------------------------------------------------
+\subsection{Ferramentas de apoio}
+%-------------------------------------------------------------
+Nesta seção serão especificados as ferramentas a serem utilizadas para a estruturação do sistema  Web.
+
+\begin{itemize}
+\item \textbf{Notion}: Foi escolhido como plataforma de organização de projetos, pois este possui métodos de gerenciamento de equipe, fornecendo uma interface para vários desenvolvedores trabalharem utilizando o quadro de kanban, assim como o compartilhamento de arquivos, vídeos e artigos; permitindo também notificações via e-mail sobre atualizações do projeto e de reuniões marcadas, por exemplo. 
+    
+\item \textbf{Discord}: Plataforma de comunicação online escolhida pela equipe, por ser a mais utilizada e conhecida entre os mesmos. Nela é possível criar servidores privados para compartilhar informações e realizar reuniões sobre o projeto.
+    
+\item \textbf{Overleaf}: Para a preparação do documento de visão, será usado o \LaTeX, visto que este possui comando de padronização para documentos acadêmicos, facilitando a sua construção, juntamente, com editor Overleaf que oferece um ambiente compartilhado entre os membros da equipe. 
+    
+\item \textbf{Figma}: Na parte de modelagem do sistema e elaboração ideias de soluções de problemas, escolheu-se o Figma, visto que é uma ferramenta gratuita que possui diversas opções de edição.
+    
+\item \textbf{Visual Studio Code}: A \acs{ide} escolhida para realizar a edição de código-fonte na parte \textsl{\gls{front-end}} do sistema, por razões de ser um recurso da atualidade com possibilidades de várias adaptações de ambiente, principalmente as nossas tecnologias escolhidas.
+
+\item \textbf{Eclipse}: A \acs{ide} escolhida para realizar a edição de código-fonte na parte \textsl{\gls{back-end}}, por motivo de facilidade que o ambiente de desenvolvimento proporciona para rodar aplicações com Java e, também, seus recursos que fazem a integração com o banco de dados.
+\end{itemize}
+
+%-------------------------------------------------------------
+\input{textos_documento/03.2-textos-gestao-e-equipe}
+%-------------------------------------------------------------

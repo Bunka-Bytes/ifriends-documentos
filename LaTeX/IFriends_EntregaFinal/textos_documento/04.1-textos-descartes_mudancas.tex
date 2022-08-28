@@ -1,0 +1,16 @@
+%--------------------------------------------------------------
+\section{Descartes}
+%--------------------------------------------------------------
+A seguinte seção foi criada visando fornecer informações a respeitos dos descartes realizados a partir do espoco inicial proposto para o projeto. 
+
+O primeiro descarte a ser feito foi em relação ao uso do \gls{scoold} no desenvolvimento, inicialmente a equipe pretendia fazer uso dessa plataforma visto que as funcionalidades que ela trazia se assemelhavam a boa parte do que se pretendia desenvolver no \gls{ifriends}. 
+
+Mas, após fazer os estudos iniciais a respeito de como fazer essa implementação e de como fazer a integração com os outros recursos que ainda precisariam ser desenvolvidos, a equipe denotou que a tarefa se tornaria mais complexa do que o esperado, já que era necessário um estudo mais aprofundado, e como não dispomos um tempo de desenvolvimento significativo decidiu-se usar o \gls{scoold} apenas como uma inspiração. Vale lembrar que o descarte da plataforma já tinha sido previsto no escopo inicial do projeto, então o tempo aplicado no estudo não foi perdido e se tomou como aprendizado.
+
+ 
+%--------------------------------------------------------------
+ \section{Mudanças}
+%--------------------------------------------------------------
+Visando também pelas mudanças, a seguinte seção tem o intuito de apresentá-las seguida dos critérios considerados para a sua aplicação no projeto. 
+ 
+A primeira mudança mais evidente foi realizada sobre o \gls{heroku} em relação ao \gls{front-end} do sistema: após várias investigações realizadas pela equipe, foi encontrado o \gls{vercel} como melhor opção de servidor de hospedagem para substituir o \gls{heroku}, visto que ele atendia todos os \href{https://vercel.com/blog/automatic-ssl-with-vercel-lets-encrypt}{requisitos de segurança faltantes}, além de que foi constatado pela equipe posteriormente que o \textsl{Buildpack} utilizado para subir a aplicação no \gls{heroku} seria \href{https://github.com/mars/create-react-app-buildpack}{descontinuado}, o que também contribuiu para a mudança. Para o \gls{back-end}, por outro lado, tentou-se encontrar um serviço de hospedagem que cumprisse todos os requisitos existentes no \gls{heroku}, mas não se obteve sucesso na busca. Como os requisitos de segurança foram cumpridas de forma satisfatória, a equipe considerou que não seria considerado urgente mudar a hospedagem da \gls{api} neste momento.

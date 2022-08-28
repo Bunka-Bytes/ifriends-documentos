@@ -1,0 +1,36 @@
+\chapter{Prova de Conceito}
+
+De acordo com \citeonline {lima2020usando}, prova de conceito ou \acs{POC} é o nome que se dá à demonstração da probabilidade de validação de uma ideia (ou conceito), podendo ser na área de TI ou na área dos negócios. A \acs{POC} pode ser aplicada em um protótipo ou em um projeto em fase inicial, e normalmente segue um roteiro de testes. Esses testes são evidências, que demonstram que um conceito de design, proposta de negócio entre outros, são viáveis.
+
+Segundo \citeonline {lima2020usando}, só é necessário realizar a prova de conceito, sempre que há desejo de implementar mudanças relacionadas a processos, ferramentas ou métodos, e isso se dá através dos testes designados pela mesma. Através da \acs{POC} é possível determinar se o serviço ou produto funciona na prática e qual seu respectivo nível de eficácia e eficiência, além de ser extremamente importante tanto para o cliente como para o desenvolvedor, que no que lhe concerne, adquire a chance de implementar uma solução em um ambiente real de mercado onde todas as variáveis e possibilidades que podem acabar influenciando na solução, são expostas.
+
+Para a prova de conceito do projeto de sistema \gls{ifriends}, escolheu-se desenvolver, considerando a utilização do método ágil, apenas dois \textit{Épicos}: Gestão de Perguntas e Gestão de Respostas, descritos na seção de análise de requisitos. Isto, pois, após discussões em equipe e analisando a definição de \acs{POC}, os integrantes chegaram a um consenso de que estes são os itens mais fundamentais para que o funcionamento do projeto seja provado. 
+
+Utilizando as tecnologias elencadas anteriormente, foi possível criar todas as requisições escolhidas nos épicos para a \acs{api} do projeto, e ainda pode-se publicá-la no \gls{heroku}, disponível na \autoref{qrcode_api} e conseguimos chamá-la no \textit{front-end} da aplicação através da biblioteca Axios.
+
+\begin{figure}[htb]
+\centering
+\caption{\href{https://ifriends-api.herokuapp.com/}{API IFriends}}
+
+\label{qrcode_api}
+\qrcode{https://ifriends-api.herokuapp.com/}
+\fonte{Os autores}
+\end{figure}
+\FloatBarrier
+
+ No entanto, ao publicar a aplicação ReactJS no \gls{heroku}, disponível na \autoref{qrcode_app-ifriends}, foi gerado um erro de limite de memória do Node.JS excedido, e portanto, aplicação saiu do ar. Isto ocorreu após terem sido adicionados mais recursos nela, ou seja, no último \textsl{deploy} feito. Outro ponto é que este problema acontece somente após serem feitas algumas requisições, e não no momento em que é feito o \textsl{deploy} e mesmo aumentando a capacidade miníma de memória, o erro persistiu. A equipe pretende assim investigar o fato ocorrido para tomar possíveis planos de ação para as melhorias no projeto, partindo inicialmente da \href{https://devcenter.heroku.com/articles/node-memory-use}{documentação do \gls{heroku}}, que visa explicar o problema e trazer mais possíveis soluções.
+ 
+\begin{figure}[htb]
+\centering
+\caption{\href{https://app-ifriends.herokuapp.com}{Aplicação IFriends}}
+\label{qrcode_app-ifriends}
+\qrcode{https://app-ifriends.herokuapp.com}
+\fonte{Os autores}
+\end{figure}
+\FloatBarrier
+
+Com relação aos demais fatores do sistema, a equipe notou que foi possível testar a solução de maneira satisfatória, ainda que alguns problemas tenham acontecido no meio do caminho. A respeito da internacionalização e da criptografia, por exemplo, conseguiu-se encontrar recursos para fazê-las, visto que, no ReactJS, podemos definir a internacionalização com a biblioteca \href{https://ant.design/components/config-provider/}{Ant Design}, porém a solução apresentou instabilidade após a implementação, e dessa forma, optou-se por não demonstrá-la na apresentação. Além disso, foi percebido que o próprio \gls{heroku} disponibiliza meios para inclusão da criptografia do sistema, mas conforme dito anteriormente, precisa-se solucionar o problema da hospedagem para que todos os recursos do sistema estejam funcionando on-line de maneira correta.
+
+Dentre as demais mudanças feitas no projeto está a utilização do \textsl{Scoold} apenas como referência para o desenvolvimento, e não mais como uma tecnologia a ser incorporada no sistema. 
+
+Por outro lado, espera-se que após todos os apontamentos feitos, o projeto possa ser melhorado de forma iterativa para que a entrega da primeira versão seja feita sem instabilidades e, além disso, que a equipe possa realizar as entregas nos devidos prazos e com o cumprimento de todos os requisitos propostos.

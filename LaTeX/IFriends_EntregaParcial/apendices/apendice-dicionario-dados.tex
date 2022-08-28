@@ -1,0 +1,290 @@
+\chapter{Dicionário de Dados}
+\label{dicionario de dados}
+% -------------------------------------------------------------------------------
+A seguinte seção apresentará o \ac{dd} das tabelas de banco de dados do projeto \gls{ifriends}.
+
+%--Tabela usuario---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Usuário]{Usuário.}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_usuario & INT & 11 & N & PK & Chave primária do usuário \\ \hline
+nome & VARCHAR & 150 & N &  & Nome do usuário \\ \hline
+email & VARCHAR & 100 & N &  & E-mail institucional do usuário \\ \hline
+senha & VARCHAR & 255 & N &  & Senha de acesso ao sistema \\ \hline
+link\_img\_usuario & VARCHAR & 255 & S &  & link da imagem de perfil \\ \hline
+curso & VARCHAR & 20 & S &  & Curso atual \\ \hline
+ano & SMALLINT & 1 & S &  & Ano que o usuário cursa, ex.: 1\textdegree ano \\ \hline
+reputacao\_total & INT & 11 & N  &  & Pontuação da reputação do usuário \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela usuario_pergunta---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Usuário\_Pergunta]{Curte\_Perg.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_curte\_perg & INT & 11 & N & PK & Chave primária da curte\_perg \\ \hline
+id\_usuario & INT & 11 & N & FK & Chave estrangeira no usuário \\ \hline
+id\_pergunta & INT & 11 & N & FK & Chave estrangeira na pergunta \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela usuario_resposta---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Usuário\_Resposta]{Curte\_Resp.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_curte\_resp & INT & 11 & N & PK & Chave primária da curte\_resp \\ \hline
+id\_usuario & INT & 11 & N & FK & Chave estrangeira no usuário \\ \hline
+id\_resposta & INT & 11 & N & FK & Chave estrangeira na resposta \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela usuario_titulo---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Usuário\_Título]{Usuário\_Título.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_usuario & INT & 11 & N & FK & Chave estrangeira no usuário \\ \hline
+id\_titulo & INT & 11 & N & FK & Chave estrangeira no titulo \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+
+%---Tabela titulo---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Título]{Título.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_titulo & INT & 11 & N & PK & Chave primária do título \\ \hline
+nome\_titulo & VARCHAR & 50 & N &  & Nome do título \\ \hline
+reputacao & INT & 11 & N & & Acumulo da pontuação \\\hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela Curso ---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Curso]{Curso.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+sigla\_curso & VARCHAR & 20 & N & PK & Sigla e chave primária do curso \\ \hline
+nome\_curso & VARCHAR & 50 & N &  & Nome do curso \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela Resposta---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Resposta]{Resposta.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{2.2cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\ \hline
+
+id\_resposta & INT & 11 & N & PK & Chave primária da resposta \\ \hline
+id\_usuario & INT & 11 & N & FK  & Chave estrangeira de usuário \\ \hline
+id\_pergunta & INT & 11 & N & FK & Chave estrangeira de pergunta \\ \hline
+texto\_resp & VARCHAR & 800 & N &  & Conteúdo da resposta \\ \hline
+deletado & BOOLEAN & & N & & Resposta foi deletada ou não \\ \hline
+link\_img\_resp & VARCHAR & 255 & S & & Imagem da resposta \\ \hline
+aceita & BOOLEAN & & N & & Se a resposta foi aceita como solução válida para o autor da pergunta \\ \hline
+dt\_resp & TIMESTAMP &  & N & & Data em que a resposta foi publicada \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela Tag---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Tag]{Tag.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_tag & INT & 11 & N & PK & Chave primária da tag \\ \hline
+nome\_tag & VARCHAR & 20 & N &  & Nome da tag \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela Pergunta---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Pergunta]{Pergunta.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{2.2cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{ Tipo }  & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\ \hline
+
+id\_pergunta & INT & 11 & N & PK & Chave primária da pergunta \\ \hline
+id\_usuario & INT & 11 & N & FK  & Chave estrangeira de usuário \\ \hline
+dt\_perg & TIMESTAMP &  & S & & Data da pergunta \\ \hline
+titulo\_perg & VARCHAR & 50 & N & & Título da pergunta \\ \hline
+texto\_perg & VARCHAR & 800 & N & & Descrição da pergunta \\ \hline
+deletado & BOOLEAN & & N & & Pergunta foi deletada ou não \\ \hline
+link\_img\_perg & VARCHAR & 255 & S & & Link da imagem da pergunta \\ \hline
+respondida & BOOLEAN & & N & & Se a pergunta já teve uma resposta útil a quem perguntou \\ \hline
+visualizações & INT & 11 & S & & Quantidade de visualizações da pergunta \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+
+%---Tabela tag_pergunta---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Tag\_Pergunta]{Tag\_Perg.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\ \hline
+
+id\_tag\_perg & INT & 11 & N & PK & Chave primária da tag\_perg \\ \hline
+id\_assunto & INT & 11 & N & FK & Chave estrangeira no assunto \\ \hline
+id\_pergunta & INT & 11 & N & FK & Chave estrangeira na pergunta \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela tag_evento---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Tag\_Evento]{Tag\_Evento.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\ \hline
+
+id\_tag\_evento & INT & 11 & N & PK & Chave primária do tag\_evento \\ \hline
+id\_assunto & INT & 11 & N & FK & Chave estrangeira no assunto \\ \hline
+id\_evento & INT & 11 & N & FK & Chave estrangeira no evento \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela evento---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Evento]{Evento.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_evento & INT & 11 & N & PK & Chave primária do evento \\ \hline
+id\_usuario & INT & 11 & S & FK  & Chave estrangeira de usuário \\ \hline
+presencial & char & 1 & N & & Local do evento, sendo presencial, online ou ambos \\ \hline
+nome\_evento & VARCHAR & 50 & N & & Nome do evento \\ \hline
+texto\_evento & TEXT &  & N & & Descrição sobre o evento \\ \hline
+dt\_evento & DATE & & N & & Data que o evento ocorrerá \\ \hline
+img\_evento & TEXT &  & S & & Imagem do evento \\ \hline
+local & TEXT & & N & & Local onde será realizado, tanto presencial como online \\ \hline
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+%---Tabela Categoria---%
+\def\arraystretch{1.5}
+
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[Categoria]{Categoria.}
+\label{quadro-dicionario-dados}
+\begin{tabular}{|>{\Centering}m{3cm}|>{\Centering}m{1.75cm}|>{\Centering}m{1.6cm}|>{\Centering}m{1.15cm}|>{\Centering}m{1.25cm}|m{4.5cm}|}
+\hline
+\thead{Atributo} & \thead{Tipo} & \thead{Tamanho} & \thead{Nulo} & \thead{Chave} & \thead{Descrição}\\
+\hline
+
+id\_categoria & INT & 11 & N & PK & Chave primária da categoria \\ \hline
+nome\_categoria & INT & 50 & N & FK & Nome da categoria \\ \hline
+
+\end{tabular}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 

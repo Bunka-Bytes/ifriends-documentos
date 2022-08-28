@@ -1,0 +1,304 @@
+%----------------------------------------------------------------------------------
+\chapter{Desenvolvimento}
+%----------------------------------------------------------------------------------
+Baseando-se na conceituação de engenharia de \textsl{software} dada por \citeonline{SOMMERVILLE:2019}, neste capítulo é descrito o desenvolvimento do sistema, cujas etapas estão apoiadas em técnicas que vão desde sua especificação até sua evolução.
+
+Além do presente documento, o desenvolvimento do projeto ainda pode ser acompanhado através dos outros canais de registro que fazem parte dos requisitos da disciplina, sendo eles:
+
+\begin{itemize}
+%---
+    \item \textbf{Aplicação:} A aplicação do projeto já hospedada na plataforma \gls{heroku}.
+    \begin{figure}[htb]
+    \centering
+    \caption{\href{https://app-ifriends.herokuapp.com}{Link da aplicação}}
+    \qrcode{https://app-ifriends.herokuapp.com}
+    \fonte{Os autores}
+    \end{figure}
+    \FloatBarrier
+%---
+    \item \textbf{Blog do projeto:} Pelo menos uma vez por semana, o blog do projeto recebe uma postagem a respeito do que foi desenvolvido naquele período. 
+    
+    \begin{figure}[htb]
+    \centering
+    \caption{\href{https://bunkabytes.blogspot.com}{Link do \textit{blog} do projeto}}
+    \qrcode{https://bunkabytes.blogspot.com}
+    \fonte{Os autores}
+    \end{figure}
+    \FloatBarrier
+%---
+    \item \textbf{Canal no YouTube:} Através do canal no \gls{youtube} é possível conferir as apresentações realizadas pela equipe.
+    
+    \begin{figure}[htb]
+    \centering
+    \caption{\href{https://www.youtube.com/channel/UCOJVZlclPTqngZQwPS9Fvpg}{Link do canal no \textit{Youtube}}}
+    \qrcode{https://www.youtube.com/channel/UCOJVZlclPTqngZQwPS9Fvpg}
+    \fonte{Os autores}
+    \end{figure}
+    \FloatBarrier
+%---
+    \item \textbf{Repositório no \textit{SVN}:} É o repositório principal do projeto, nele se encontram todos os arquivos do projeto, desde a documentação até os arquivos de desenvolvimento. 
+    
+    \begin{figure}[htb]
+    \centering
+    \caption{\href{https://svn.spo.ifsp.edu.br/svn/a6pgp/A2022-PDS-SEG/Bunka_Bytes/}{Link do repositório}}
+    \qrcode{https://svn.spo.ifsp.edu.br/svn/a6pgp/A2022-PDS-SEG/Bunka_Bytes/}
+    \fonte{Os autores}
+    \end{figure}
+    \FloatBarrier
+%---
+\end{itemize}
+
+%------------------------------------------------------------
+\input{textos_documento/03.1-textos-materias-metodos}
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+\section{Análise de Requisitos}
+%------------------------------------------------------------
+Segundo \citeonline{machado2018analise}, ao definir as características de um requisito, é preciso salientar que não são dependentes da tecnologia empregada, visto que suas especificações estão contidas no campo do cumprimento das necessidades do usuário. Dessa forma,  \citeonline{machado2018analise} define os requisitos como ``objetivos ou restrições estabelecidas por clientes e usuários do sistema que definem suas diversas propriedades''.
+
+Assim, tanto \citeonline{machado2018analise} como \citeonline{SOMMERVILLE:2019} concordam que a fase de definição de requisitos, a chamada engenharia de requisitos, é essencial para a tomada de decisões sobre os passos para adquirir ou desenvolver o sistema. Por outro lado, Sommerville ainda acrescenta sobre a necessidade de mudança durante o desenvolvimento:
+
+\begin{citacao}
+Naturalmente, são feitas mudanças subsequentes nos requisitos de usuário, que podem ser ampliados para requisitos de sistema mais detalhados. Às vezes, pode-se utilizar uma abordagem ágil para elicitar simultaneamente os requisitos à medida que o sistema é desenvolvido, a fim de acrescentar detalhes e refinar os requisitos de usuário \cite{SOMMERVILLE:2019}.
+\end{citacao}
+
+Tendo tais definições em vista, as próximas seções visam apresentar os requisitos funcionais e não funcionais, e as regras do negócio característicos do projeto tratado neste documento. 
+% Para representar os requisitos funcionais e os requisitos não funcionais se usou as histórias de usuário. Foi com base na utilização da abordagem ágil no projeto, que se definiu três prioridades principais: alta, média e baixa. 
+
+% A prioridade alta é aquela correspondente aos requisitos obrigatórios para o funcionamento do sistema, isto é, aqueles que caso faltem, o sistema em si não existe; já na prioridade média, por exemplo, são característicos aqueles desejáveis, ou seja, são importantes para o sistema, mas não interferem diretamente numa mudança brusca de seu comportamento. Desse modo, os requisitos de prioridade baixa, são tidos como opcionais, aqueles que podem entrar no sistema eventualmente, mas que, numa fila de produção, não serão feitos antes dos demais. Vale ressaltar, por conseguinte, que tais decisões dependem da negociação entre os envolvidos no projeto e do método de produção utilizado, como descrevem \citeonline{vazquezsimoes:2016}. Os autores ainda completam, dizendo:
+
+% \begin{citacao}
+% A priorização tem como função assegurar que os recursos do projeto sejam focados nos itens mais relevantes. Daí a importância de, na especificação, diferenciar cada requisito em termos de importância, dentre dezenas ou centenas de outros requisitos.
+
+% A responsabilidade por definir a prioridade do requisito deveria ser da parte interessada, facilitada pelo gerente de projetos \cite{vazquezsimoes:2016}.
+% \end{citacao}
+
+%------------------------------------------------------------
+\subsection{Histórias de Usuário}
+%------------------------------------------------------------
+Segundo \citeonline{cruz:2018} as histórias de usuário se caracterizam como uma descrição resumida, clara e objetiva de uma funcionalidade fornecida pelo produto a ser entregue, visando o ponto de vista final do usuário. Ainda segundo o autor para uma história ser tida como completa, ela deve possuir uma descrição objetiva e critérios de aceitação, esses critérios representam o que ela precisa fazer para ser considerada válida.
+
+No projeto, a equipe aproveitou as histórias de usuário para representar os requisitos funcionais e não funcionais, dessa forma os requisitos funcionais podem ser identificados a partir do nome das histórias, e o não funcionais por meio dos critérios de aceitação definidos para tais.
+
+Todas as histórias se encontram no \autoref{historias de usuario} e apresentam sete componentes: o seu nome, a sua descrição, seus critérios de aceitação, o épico a qual pertence, a pontuação que ela recebeu no \textsl{Planning Poker Card}, a estimativa de tamanho conforme a sua pontuação e a sua prioridade conforme o seu tamanho e pontuação. Ainda com o fim de organizá-las foram separadas por meio dos seguintes épicos:
+
+\begin{itemize}
+\item {\textbf{Gestão de Perguntas:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de perguntas}. Logo, os devidos detalhes de cada história de usuário se encontra na \autoref{gestão_perguntas} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Gestão de perguntas}
+\label{resumo: gestão de perguntas}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Manter uma pergunta & 13 & Grande & ALTA \\ \hline
+Filtrar perguntas & 8 & Médio & MÉDIA \\ \hline
+Adicionar assuntos & 3 & Pequeno & ALTA \\ \hline
+Curtir uma pergunta & 2 & Pequeno & ALTA \\ \hline
+Buscar perguntas & 2 & Pequeno & MÉDIA  \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Como a primeira história a ser desenvolvida pela equipe se encontrava nesse épico, era necessário considerar também a configuração de ambiente, dessa forma, ele acabou recebendo uma estimava global de esforço maior, em relação aos outros, totalizando 28 pontos.
+
+\item {\textbf{Gestão de Respostas:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de respostas}. Logo, os devidos detalhes de cada história de usuário se encontra na \autoref{gestão_respostas} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Gestão de respostas}
+\label{resumo: gestão de respostas}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Manter uma resposta & 5 & Médio & ALTA \\ \hline
+Curtir uma resposta & 1 & Pequeno & ALTA \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Se tratando do segundo épico a ser trabalhado, a sua estimativa global de esforço foi menor em relação ao primeiro, mas nele ainda foi mantida a prioridade alta, dessa forma, o épico totalizou 6 pontos.
+    
+\item {\textbf{Gestão de Eventos:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de eventos}. Logo, os devidos detalhes de cada história de usuário se encontra na \autoref{gestão_eventos} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Gestão de eventos}
+\label{resumo: gestão de eventos}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Manter evento & 3 & Pequeno & BAIXA \\ \hline
+Favoritar evento & 2 & Pequeno & BAIXA \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+O épico totalizou 5 pontos, e suas histórias foram classificadas com tamanho pequeno devido à semelhança no desenvolvimento das histórias anteriores, dessa forma, foram denotadas como histórias de usuário nível fácil.
+
+\item {\textbf{Gestão de Usuários:}} Para este épico foi destinada à história de usuário do \autoref{resumo: gestão de usuários}. Logo, seus devidos detalhes se encontra na \autoref{gestão_usuario} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Gestão de usuários}
+\label{resumo: gestão de usuários}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Autenticação do usuário & 5 & Médio & ALTA \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+O épico é responsável pelo quesito de autenticação do sistema, no entanto, por não ser uma tarefa muito complexa totalizou 5 pontos como estimativa de esforço.
+
+\item {\textbf{Usabilidade:}} Para este épico foi destinada à história de usuário do \autoref{resumo: usabilidade}. Logo, seus devidos detalhes se encontra na \autoref{gestão_usabilidade} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Usabilidade}
+\label{resumo: usabilidade}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Internacionalização & 5 & Médio & ALTA \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+O épico é responsável para classificar entregas relacionadas a usabilidade do sistema, sendo a única mapeada até o momento, criada para a entrega do valor de disponibilidade de tradução dos conteúdos em português e inglês. Logo, o épico totalizou 5 pontos como estimativa de esforço.
+
+\end{itemize}
+
+%------------------------------------------------------------
+\subsection{Regras de Negócio}
+%------------------------------------------------------------
+Regras de negócio são requisitos de domínio de aplicação tratado no desenvolvimento de um sistema, isso significa, as declarações sobre como determinada empresa faz negócio. É a partir dessas regras que se define como o negócio funciona e quais são suas especificações, além da sua importância para o desenvolvimento de um sistema, pois, auxiliam no controle dos processos, ajudam na tomada de decisões além de afetarem diretamente os requisitos funcionais, como descrevem \citeonline{dallavalle2000regras}. Dessa forma, o \autoref{regras negocio} lista as regras de negócio levantadas para o projeto \gls{ifriends}.
+
+\def\arraystretch{2}
+\begin{quadro}[thb]
+\centering
+\ABNTEXfontereduzida
+\caption{Regras de Negócio}
+\label{regras negocio}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|c|p{13cm}|}
+\hline
+\textbf{ID} & \textbf{Descrição} \\
+\hline
+\acs{RN}01 & Não serão permitidos usuários com os mesmos dados, ou seja, o sistema só permitirá a criação de uma conta por usuário \\
+\hline
+\acs{RN}02 & A fim de garantir a segurança de nossos usuários, o sistema deverá fazer uso de algumas diretrizes da Lei Marco Civil da Internet, lei n\textdegree 12.965/2014, que tem como objetivo estabelecer princípios, garantias, direitos e deveres para o uso da internet no Brasil. \\
+\hline
+\acs{RN}03 & Dentro do direito a exclusão, ao excluir seu perfil, o usuário deve ter ciência de que suas perguntas e respostas serão mantidas na comunidade, porém como parte de um usuário anônimo (exemplo: user12345678). \\
+\hline
+\acs{RN}04 & O usuário deve levar em consideração as boas prática para o desenvolvimento de uma pergunta (\autoref{boa-pergunta}).  \\
+\hline
+
+\end{tabular}}\legend {Fonte: os autores}
+\end{quadro}
+\FloatBarrier 
+
+%------------------------------------------------------------
+\subsection{Partes interessadas e usuários}
+%------------------------------------------------------------
+Segundo \citeonline{BibEntry2021Nov} por \textit{stakeholders} ou partes interessadas se entende todas as organizações ou grupo de pessoas que possam apresentar interesse ou serem afetadas pelas ações de uma determinada empresa. Nas partes interessadas podem se classificar desde colaboradores, tidos como \textit{stakeholders} internos, até fornecedores, investidores, clientes e comunidades, tidos como externos. 
+
+Dessa forma, no \autoref{Partes interessadas} foram representados os \textit{stakeholders} considerados para o desenvolvimento do projeto \gls{ifriends}.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Partes interessadas}
+\label{Partes interessadas}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|c|c|p{9cm}|}
+\hline
+\thead{Nome} & \thead{Nível de influência} & \thead{Interesses e Expectativas}\\
+\hline
+Discentes & Alto & Participar do fórum de perguntas e respostas, assim como gerenciar os eventos \\ \hline
+Docentes & Médio & Acompanhamento extracurricular das dificuldades relacionadas a respeito do conteúdo lecionado. \\ \hline
+Coordenação e Direção & Médio & Regulação no uso adequado do sistema, ou seja, se ele esta cumprindo o que foi planejado inicialmente. \\ \hline
+Pais e responsáveis & Médio & Estar a par dos meios extracurriculares aderidos pela instituição. \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Já por usuário, segundo \citeonline{BibEntry2017Oct}, são caracterizados aqueles que usam um determinado sistema, não sendo necessário um conhecimento técnico completo para compreender e executá-lo. Dessa forma, o \autoref{usuários} apresenta todos os possíveis usuários que possam ter acesso ao projeto de sistemas \gls{ifriends}.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Usuários}
+\label{usuários}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|c|p{5cm}|p{7cm}|}
+\hline
+\thead{Nome} & \thead{Descrição} & \thead{Ações} \\
+\hline
+\glspl{friend} & Dicentes que tenham interesse no fórum e nos eventos. & Este tipo de usuário pode visualizar, respoder, curtir, denunciar, cadastrar perguntas e respostas no fórum além de poder realizar as mesmas ações na seção de eventos. \\ 
+\hline
+Docentes & Professores que tenham interesse em realizar acompanhamento de seus alunos por meio do \gls{ifriends}. & Este tipo de usuário possui as mesmas ações que o tipo de usuário \glspl{friend}. \\ 
+\hline
+Usuários externos & Pessoas que desejem conhecer a comunidade e que não façam parte da instituição. & Este tipo de usuário terá apenas a possibilidade de visualizar páginas públicas. \\
+\hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+O termo \glspl{friend} surge devido a um apelido destinado aos usuários do sistema \gls{ifriends}, além de ele nos ajudar a demostrar melhor as funcionalidades do sistema, o mesmo também nos permite demostrar a importância e o carinho desempenhado pela equipe na produção deste projeto.  
+
+%------------------------------------------------------------
+\input{textos_documento/03.3-textos-modelagem}
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+\input{textos_documento/03.4-textos-design-do-projeto}
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+\input{textos_documento/03.5-textos-swagger}
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+\input{textos_documento/03.6-textos-seguranca-hospedagem}
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+\input{textos_documento/03.7-textos-testes}
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+\input{textos_documento/04-textos-historico-de-desenvolvimento}
+%------------------------------------------------------------

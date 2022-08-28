@@ -1,0 +1,226 @@
+% Para facilitar a manutenção é sempre melhore criar um arquivo por capitulo, para exemplo isso não é necessário 
+
+%---------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------
+
+
+\input{06-textos-materias-metodos}
+
+%---------------------------------------------------------------------------------------
+
+
+
+%--------------------------------------------------------------------------------
+\chapter{Desenvolvimento}
+  Baseando-se na conceituação de engenharia de \textsl{software} dada por \citeonline{SOMMERVILLE:2019}, neste capítulo é descrito o desenvolvimento do sistema, cujas etapas estão apoiadas em técnicas que vão desde sua especificação até sua evolução. Neste sentido, \citeonline{SOMMERVILLE:2019} destaca quatro etapas como fundamentais para os processos de \textsl{software}, sendo elas sequenciadas em: especificação, desenvolvimento, validação e evolução. As etapas correspondentes a este capítulo consistem na definição, junto as suas restrições, e na projeção do sistema para ser programado - isto é, a especificação e o desenvolvimento.
+  
+  Desse modo, as especificações descritas no capítulo estão separadas em: análise de requisitos, regras do negócio, modelagem do sistema e prototipação.
+
+%------------------------------------------------------
+
+
+%------------------------------------------------------
+\section{Análise de Requisitos}
+Segundo \citeonline{machado2018analise}, ao definir as características de um requisito, é preciso salientar que não são dependentes da tecnologia empregada, visto que suas especificações estão contidas no campo do cumprimento das necessidades do usuário. Dessa forma,  \citeonline{machado2018analise} define os requisitos como ``objetivos ou restrições estabelecidas por clientes e usuários do sistema que definem suas diversas propriedades''.
+
+Assim, tanto \citeonline{machado2018analise} como \citeonline{SOMMERVILLE:2019} concordam que a fase de definição de requisitos, a chamada engenharia de requisitos, é essencial para a tomada de decisões sobre os passos para adquirir ou desenvolver o sistema. Por outro lado, Sommerville ainda acrescenta sobre a necessidade de mudança durante o desenvolvimento:
+
+\begin{citacao}
+Naturalmente, são feitas mudanças subsequentes nos requisitos de usuário, que podem ser ampliados para requisitos de sistema mais detalhados. Às vezes, pode-se utilizar uma abordagem ágil para elicitar simultaneamente os requisitos à medida que o sistema é desenvolvido, a fim de acrescentar detalhes e refinar os requisitos de usuário \cite{SOMMERVILLE:2019}.
+\end{citacao}
+
+Tendo tais definições em vista, as próximas seções visam apresentar os requisitos funcionais e não funcionais, e as regras do negócio característicos do projeto tratado neste documento. Para representar os requisitos funcionais e os requisitos não funcionais se usou as histórias de usuário. Foi com base na utilização da abordagem ágil no projeto (mais especificada na seção 3), que se definiu três prioridades principais: alta, média e baixa. 
+
+A prioridade alta é aquela correspondente aos requisitos obrigatórios para o funcionamento do sistema, isto é, aqueles que caso faltem, o sistema em si não existe; já na prioridade média, por exemplo, são característicos aqueles desejáveis, ou seja, são importantes para o sistema, mas não interferem diretamente numa mudança brusca de seu comportamento. Desse modo, os requisitos de prioridade baixa, são tidos como opcionais, aqueles que podem entrar no sistema eventualmente, mas que, numa fila de produção, não serão feitos antes dos demais. Vale ressaltar, por conseguinte, que tais decisões dependem da negociação entre os envolvidos no projeto e do método de produção utilizado, como descrevem \citeonline{vazquezsimoes:2016}. Os autores ainda completam, dizendo:
+
+
+\begin{citacao}
+A priorização tem como função assegurar que os recursos do projeto sejam focados nos itens mais relevantes. Daí a importância de, na especificação, diferenciar cada requisito em termos de importância, dentre dezenas ou centenas de outros requisitos.
+
+A responsabilidade por definir a prioridade do requisito deveria ser da parte interessada, facilitada pelo gerente de projetos \cite{vazquezsimoes:2016}.
+\end{citacao}
+
+\subsection{Histórias de Usuário}
+Segundo \citeonline{cruz:2018} as histórias de usuário se caracterizam como uma descrição resumida, clara e objetiva de uma funcionalidade fornecida pelo produto a ser entregue, visando o ponto de vista final do usuário. Ainda segundo o autor para uma história ser tida como completa, ela deve possuir uma descrição objetiva e critérios de aceitação, esses critérios representam o que ela precisa fazer para ser considerada válida.
+
+No projeto, a equipe aproveitou as histórias de usuário para representar os requisitos funcionais e não funcionais, dessa forma os requisitos funcionais podem ser identificados a partir do nome das histórias, e o não funcionais por meio dos critérios de aceitação definidos para tais. Além disso, considerando a entrega da \acs{POC}, as histórias foram separadas conforme a elaboração dos dois épicos preparados para esta entrega, sendo elas a gestão de perguntas e a gestão de respostas.
+
+Todas as histórias apresentam sete componentes: o seu nome, a sua descrição, seus critérios de aceitação, o épico a qual pertence, a pontuação que ela recebeu no \textsl{planning poker}, a estimativa de tamanho conforme a sua pontuação e a sua prioridade conforme o seu tamanho e pontuação.
+
+%%%%%%%  História - Manter uma pergunta %%%%%%% 
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[História: Manter uma pergunta]{História: Manter uma pergunta}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|c|}
+\hline
+\thead{Descrição} & \thead{Épico} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+
+Como aluno, eu gostaria de manter uma pergunta na comunidade para retirar uma dúvida & Gestão de Perguntas & 13 & Grande & ALTA \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Para esta história de usuário foram definidos os seguintes itens como critérios de aceitação:
+
+\begin{itemize}
+\item Mostrar ``como fazer uma boa pergunta'';
+\item O usuário deve conseguir somente criar e remover uma pergunta da visualização;
+\item O usuário deve conseguir fechar o espaço de resposta para a pergunta;
+\end{itemize}
+
+%%%%%%% História - Buscar Perguntas %%%%%%% 
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[História: Buscar perguntas]{História: Buscar perguntas}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|c|}
+\hline
+\thead{Descrição} & \thead{Épico} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+
+Como aluno, eu gostaria de buscar perguntas feitas para que possa consultar uma pergunta específica & Gestão de Perguntas & 2 & Pequena & Média \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Para esta história de usuário foram definidos os seguintes itens como critérios de aceitação:
+
+\begin{itemize}
+\item O usuário precisa informar total ou parcialmente o título da pergunta desejada;
+\item As perguntas serão exibidas conforme as informações passadas, podendo ser semelhantes parcial ou totalmente;
+\end{itemize}
+
+%%%%%%% História - Curtir uma pergunta %%%%%%% 
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[História: Curtir uma pergunta]{História: Curtir uma pergunta}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|c|}
+\hline
+\thead{Descrição} & \thead{Épico} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+
+Como aluno, eu gostaria de votar em uma pergunta para indicar se ela me foi útil ou não. & Gestão de Perguntas & 2 & Pequena & Alta \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Para esta história de usuário foram definidos os seguintes itens como critérios de aceitação:
+
+\begin{itemize}
+\item Um usuário só poderá votar uma única vez;
+\item Cada voto equivale a um ponto;
+\item Soma dos pontos por pergunta deve ser exibida;
+\end{itemize}
+
+%%%%%%% História - Manter uma resposta %%%%%%% 
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[História: Manter uma resposta]{História: Manter uma resposta}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|c|}
+\hline
+\thead{Descrição} & \thead{Épico} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+
+Como aluno, eu gostaria de manter uma resposta para retirar uma dúvida de um colega. & Gestão de Respostas & 5 & Média & Alta \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Para esta história de usuário foram definidos os seguintes itens como critérios de aceitação:
+
+\begin{itemize}
+\item As respostas mais curtidas devem ser exibidas antes das demais;
+\item O usuário deve conseguir somente criar e deletar uma resposta;
+\item Todas as respostas devem ser exibidas sem exceção;
+\end{itemize}
+
+%%%%%%% História - Curtir uma resposta %%%%%%% 
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption[História: Curtir uma resposta]{História: Curtir uma resposta}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|c|}
+\hline
+\thead{Descrição} & \thead{Épico} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+
+Como aluno, eu gostaria de curtir uma resposta para indicar se ela me foi útil ou não. & Gestão de Respostas & 1 & Pequena & Alta \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Para esta história de usuário foram definidos os seguintes itens como critérios de aceitação:
+
+\begin{itemize}
+\item Um usuário só poderá curtir uma única vez;
+\item Cada curtida equivale a um ponto;
+\item Soma das curtidas por pergunta deve ser exibida;
+\end{itemize}
+
+
+\subsection{Regras de Negócio}
+Regras de negócio são requisitos de domínio de aplicação tratado no desenvolvimento de um sistema, isso significa, as declarações sobre como determinada empresa faz negócio. É a partir dessas regras que se define como o negócio funciona e quais são suas especificações, além da sua importância para o desenvolvimento de um sistema, pois, auxiliam no controle dos processos, ajudam na tomada de decisões além de afetarem diretamente os requisitos funcionais, como descrevem \citeonline{dallavalle2000regras}. Dessa forma, o \autoref{regras negocio} lista as regras de negócio levantadas para o projeto \gls{ifriends}.
+
+\def\arraystretch{2}
+\begin{quadro}[thb]
+\centering
+\ABNTEXfontereduzida
+\caption{Regras de Negócio}
+\label{regras negocio}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|c|p{13cm}|}
+\hline
+\textbf{ID} & \textbf{Descrição} \\
+\hline
+\acs{RN}01 & Não serão permitidos usuários com os mesmos dados, ou seja, o sistema só permitirá a criação de uma conta por usuário \\
+\hline
+\acs{RN}02 & A fim de garantir a segurança de nossos usuários, o sistema deverá fazer uso de algumas diretrizes da Lei Marco Civil da Internet, lei n\textdegree 12.965/2014, que tem como objetivo estabelecer princípios, garantias, direitos e deveres para o uso da internet no Brasil. \\
+\hline
+\acs{RN}03 & Dentro do direito a exclusão, ao excluir seu perfil, o usuário deve ter ciência de que suas perguntas e respostas serão mantidas na comunidade, porém como parte de um usuário anônimo (exemplo: user12345678). \\
+\hline
+\acs{RN}04 & O usuário deve resumir seu problema dentro do título da pergunta. \\
+\hline
+\acs{RN}05 & O usuário deve descrever seu problema, informar de forma clara o que ele precisa. \\
+\hline
+\acs{RN}06 &  O usuário deve descrever qual cenário o colocou nessa situação, o que já tentou e qual seu objetivo final. \\
+\hline
+\acs{RN}07 &  Se necessário, se deve fazer uso de imagens a fim de explicando melhor o problema. \\
+\hline
+\acs{RN}08 & O usuário deve lembrar que podem haver respostas diferentes, portanto deve manter a mente aberta a novas sugestões. \\
+\hline
+
+\end{tabular}}\legend {Fonte: os autores}
+\end{quadro}
+\FloatBarrier 
+
+
+\input{09-textos-modelagem}
+
+\input{10-textos-prototipagem}
+
+%---------------------------------------------------------------------------------------
+
+
+
+
+
