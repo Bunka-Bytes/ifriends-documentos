@@ -1,6 +1,3 @@
-
-% ----------------------------------------------------------
-% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
 \chapter{Introdução}
 O presente documento é resultado da proposta de um projeto cujo objetivo é sustentado no planejamento e na execução de um sistema para a Web através do aprendizado obtido nas matérias técnicas do Curso Técnico de Informática, realizado no \acs{ifsp}, e como forma de trabalho de conclusão de curso.
@@ -12,44 +9,38 @@ Portanto, este documento apresenta o processo de desenvolvimento da comunidade v
 %-------------------------------------------------------------------------------
 \section{Problemática e origem do projeto}
 % ------------------------------------------------------------------------------
-%Foi pensando em soluções viáveis que a equipe voltou seu olhar para sistemas que contribuem para a criação de comunidades colaborativas na área de desenvolvimento de sistemas, que, segundo \citeonline{rosa2008identidade}, foi fortemente difundida pelas comunidades de Código Aberto (do inglês, \textsl{Open Source}), sendo primeiramente criada pela cultura \textsl{hacker}, na qual afirma que a paixão e o interesse dos \textsl{hackers} nas soluções foi uma das principais propulsoras do espírito colaborativo.
+Inicialmente, foram trazidas ao debate as possibilidades de aliar as principais dificuldades que os integrantes observaram durante seu período de estudos no \ac{ifsp}, a um sistema que pudesse suprir determinadas necessidades dos alunos, como os questionamentos que começam a surgir com mais frequência conforme o início dos estudos é dado, sendo eles em âmbitos diversos tais como: questões sobre a instituição de ensino, matérias e assuntos tratados no ensino médio, dúvidas sobre os conteúdos técnicos ou até mesmo a busca por um apoio educacional - como ocorrem nas monitoriais. 
 
-Inicialmente, foram trazidas ao debate as possibilidades de aliar as principais dificuldades que os integrantes observaram durante seu período de estudo no \ac{ifsp}, a um sistema que pudesse suprir determinadas necessidades dos alunos, como os questionamentos que começam a surgir com mais frequência conforme o início dos estudos é dado, sendo eles em âmbitos diversos tais como: sobre a instituição de ensino, matérias e assuntos tratados no ensino médio, dúvidas sobre os conteúdos técnicos ou até mesmo a busca por um apoio educacional - como ocorrem nas monitoriais. 
-
-
-O \ac{ifsp}, especificamente no campus São Paulo, é o cenário no qual os integrantes da equipe e o público-alvo que a comunidade pretende atingir estão inseridos: uma instituição federada atuante nos ensinos médio, técnico profissionalizante e superior, conforme explica \citeonline{ifsmg}: 
+O \ac{ifsp}, especificamente o campus São Paulo, é o cenário no qual os integrantes da equipe e o público-alvo que a comunidade pretende atingir estão inseridos: uma instituição federada atuante nos ensinos médio, técnico profissionalizante e superior, conforme explica \citeonline{ifsmg}: 
 
 \begin{citacao}
 Os Institutos Federais são instituições que atuam na oferta da educação profissional e tecnológica, em todos os seus níveis e modalidades, formando e qualificando cidadãos com vistas na atuação nos diversos setores da economia, com ênfase no desenvolvimento socioeconômico local, regional e nacional \cite{ifsmg}.
 \end{citacao}
 
-Por ser um ambiente novo e repleto de informações simultâneas, existe a possibilidade de muitos alunos ingressantes ficarem perdidos no momento de lidar com assuntos cotidianos na vida de alunos veteranos, como: funcionamento da instituição, quantidade de disciplinas, volume de atividades, novas pessoas para se conviver, liberdade e responsabilidade concedidas ao aluno, entre outras. Isso torna o \acs{ifsp} um ambiente muito desafiador que pode gerar inúmeras dúvidas entre os novos alunos. 
-O \gls{ifriends} surge nesse cenário, no qual a criação de uma comunidade de estudantes que colaborassem entre si, pudesse instigar o interesse dos alunos em ajudarem uns aos outros de maneira acessível e prática, onde uma dúvida estivesse a um palmo de distância.
+Por ser um ambiente novo e repleto de informações simultâneas, existe a possibilidade de muitos alunos ingressantes ficarem perdidos no momento de lidar com assuntos que são cotidianos na vida de alunos veteranos, como: funcionamento da instituição, quantidade de disciplinas, volume de atividades, novas pessoas para se conviver, liberdade e responsabilidade concedidas ao aluno, entre outras. Isso torna o \acs{ifsp} um ambiente desafiador que pode gerar inúmeras dúvidas entre os novos alunos. 
+O \gls{ifriends} surge nesse cenário, no qual a criação de uma comunidade de estudantes que colaborassem entre si, pudesse instigar o interesse dos alunos em ajudarem uns aos outros de maneira acessível e prática, por meio do qual uma dúvida pode ser facilmente resolvida.
 
 %-------------------------------------------------------------------------------
-
 \section{Objetivo}
 % ------------------------------------------------------------------------------
-%Nesta seção serão descritos os respectivos objetivos (principal e específico) pretendidos com a iniciação deste projeto. 
-%\subsection{Objetivo Principal}
 
-Dadas as informações citadas anteriormente, o objetivo deste projeto é tentar instigar o interesse dos estudantes que compreendem o \acs{ifsp} para poderem criar espaços colaborativos, por um sistema no qual os usuários interajam entre perguntas e respostas, fornecendo caminhos para o esclarecimento de suas dúvidas sobre a instituição de ensino, as áreas e disciplinas que a ela pertence.  
+Dadas as informações citadas anteriormente, o objetivo deste projeto é tentar instigar o interesse dos estudantes que conhecem o \acs{ifsp} para poderem criar espaços colaborativos, por um sistema no qual os usuários interajam entre perguntas e respostas, fornecendo caminhos para o esclarecimento de suas dúvidas sobre a instituição de ensino, as áreas e disciplinas que a ela pertence.  
 
 Dessa forma, o objetivo será aplicado através da construção de uma plataforma de perguntas, respostas e mentorias para a Web, em que a comunidade interna poderá submeter uma pergunta para ser respondida pelos outros membros da comunidade; além de possibilitar que estudantes possam escolher se tornar mentores sobre determinados assuntos, disponibilizando recursos para a criação de anúncios de eventos, principalmente de monitorias (cuja localidade a eles deve competir), dentro de seus perfis de usuário. 
 
 Tendo isso em vista e pensando numa melhor interatividade entre os membros da comunidade, o sistema deve passar por um processo para uso de recursos existentes na \gls{gamificação} em algumas de suas funcionalidades, como as curtidas para respostas e perguntas mais relevantes e os atributos de recompensar aos usuários mais ativos  - assim como outros exemplos que devem ser adicionados durante o planejamento do projeto.
 
 \section{Justificativa}
-A reflexão com relação às formas complementares de aprendizagem é importante para a ampliação dos conteúdos interessados tanto aos alunos, quanto aos seus professores, pois permite que enxerguem, juntos, o ensino como um meio que evite a passagem de aprendizados de forma restrita e hierarquizada.
+A reflexão com relação às formas complementares de aprendizagem é importante para a ampliação dos conteúdos interessados tanto aos alunos, quanto aos seus professores, pois permite que enxerguem juntos o ensino como um meio que evite a passagem de aprendizados de forma restrita e hierarquizada.
 
 Por isso, \citeonline{fernandes2011redes} traz em sua pesquisa que o desafio da construção de sociedades de aprendizagem parte do pressuposto de que os recursos tecnológicos disponibilizados atualmente permitem aos estudantes aprenderem dentro e fora da escola e das mais variadas formas. Assim, para ele, a melhor forma se dá ``construindo comunidades sustentadas pelo uso de tecnologias Web''.
 
 O autor dá continuidade na exposição desse fenômeno ao atribuir o sucesso da potencialização da aprendizagem complementar e das relações sociais à ``Web 2.0''. Isto, pois, de acordo \citeonline{fernandes2011redes}, permitiu novas formas e possibilidades de criação de conteúdos e possibilitou o enfoque a uma aprendizagem motivada pelos interesses do aluno, em que ele deve assumir um papel exploratório nessa experiência, da qual poderá colher ensinamentos significativos, explica \citeonline{fernandes2011redes}.
 
-Visando atrair atenção para o tema, o projeto tem como principal missão, permitir que os estudantes possam usufruir de uma ferramenta gratuita que proporcione a suavização do seu processo de aprendizagem, quando seus próprios colegas contribuirão com suas experiências passadas, além de deixarem um histórico para possibilitar um caminho menos árduo aos estudantes que virão. Por isso, espera-se que, com este projeto, a instituição de ensino também seja um agente na construção de uma comunidade propícia para estudantes, onde poderão unir-se em razão de dúvidas comuns, e assim incentivarem a disseminação de uma cultura colaborativa dentro de seus espaços.
+Visando atrair atenção para o tema, o projeto tem como principal missão, permitir que os estudantes possam usufruir de uma ferramenta gratuita que proporcione a suavização do seu processo de aprendizagem, quando seus próprios colegas contribuirão com suas experiências passadas, além de deixarem um histórico para possibilitar um caminho menos árduo aos estudantes que virão. Por isso, espera-se que com este projeto a instituição de ensino também seja um agente na construção de uma comunidade propícia para estudantes, onde poderão unir-se em razão de dúvidas comuns, e assim incentivarem a disseminação de uma cultura colaborativa dentro de seus espaços.
 
 \chapter{Definição da proposta}
-Neste capítulo, com base nas especificações detalhadas durante a introdução, a equipe demonstra alguns dos artifícios utilizados para a construção da proposta do \gls{ifriends} e como eles influenciaram na toma de decisões para o desenvolvimento.
+Neste capítulo, com base nas especificações detalhadas durante a introdução, a equipe demonstra alguns dos artifícios utilizados para a construção da proposta do \gls{ifriends} e como eles influenciaram na tomada de decisões para o desenvolvimento.
 
 \section{Pesquisa de aceitação} 
 \label{pesquisa}
@@ -77,13 +68,13 @@ Ainda no \autoref{graficos_pesqAceitacao} é possível visualizar os gráficos r
 
 % ------------------------------------------------------------------------------
 \section{Análise de concorrência}
-Paralelamente, para a construção da proposta, levou-se em consideração uma análise de concorrência com plataformas que apresentem características semelhantes ou até mesmo parecidas com as que gostaríamos de oferecer. Dessa forma, pretendemos demostrar melhor como o nosso projeto se destaca em relação à concorrência e no que ele pode agregar.
+Paralelamente, para a construção da proposta, levou-se em consideração uma análise de concorrência com plataformas que apresentem características semelhantes ou até mesmo parecidas com as que gostaríamos de oferecer. Dessa forma, pretende-se demostrar melhor como o projeto se destaca em relação à concorrência e no que ele pode agregar.
 
-Como primeiro concorrente pensamos no \gls{moodle} já que ele faz parte da vida de muitos alunos do \acs{ifsp}, pois ele é usado como ferramenta complementar de estudos. Ele fornece, nas disciplinas criadas pelos professores, a possibilidade de criar um fórum e dispõe uma versão \textsl{mobile}.
+O \gls{moodle} foi escolhido como primeiro concorrente já que ele faz parte da vida de muitos alunos do \acs{ifsp}, pois ele é usado como ferramenta complementar de estudos. Ele fornece, nas disciplinas criadas pelos professores, a possibilidade de criar um fórum e oferece uma versão \textsl{mobile}.
 
 Como segundo concorrente pensou-se no \gls{scoold} devido a ser uma inspiração para o nosso projeto, já que a plataforma possui quase todas as funcionalidades pensadas para o \gls{ifriends}, mas seu foco é fornecer um espaço de perguntas e respostas. 
 
-Dessa forma, o \autoref{AnalisedeConcorrencia} apresenta a comparação dessas duas plataformas com o projeto de sistemas \gls{ifriends}:
+Dessa forma, o \autoref{AnalisedeConcorrencia} apresenta a comparação das duas plataformas com o projeto \gls{ifriends}:
 
 \def\arraystretch{2}
 \begin{quadro}[htb]

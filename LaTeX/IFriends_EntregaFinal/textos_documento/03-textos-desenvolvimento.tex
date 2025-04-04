@@ -70,7 +70,7 @@ Assim, tanto \citeonline{machado2018analise} como \citeonline{SOMMERVILLE:2019} 
 Naturalmente, são feitas mudanças subsequentes nos requisitos de usuário, que podem ser ampliados para requisitos de sistema mais detalhados. Às vezes, pode-se utilizar uma abordagem ágil para elicitar simultaneamente os requisitos à medida que o sistema é desenvolvido, a fim de acrescentar detalhes e refinar os requisitos de usuário \cite{SOMMERVILLE:2019}.
 \end{citacao}
 
-Tendo tais definições em vista, as próximas seções visam apresentar os requisitos funcionais e não funcionais, e as regras do negócio característicos do projeto tratado neste documento. 
+Tendo tais definições em vista, as próximas seções visam apresentar os requisitos funcionais e não funcionais, e as regras do negócio do projeto tratado neste documento. 
 
 %------------------------------------------------------------
 \subsection{Histórias de usuário}
@@ -82,60 +82,6 @@ No projeto, a equipe aproveitou as histórias de usuário para representar os re
 Todas as histórias se encontram no \autoref{historias de usuario} e apresentam sete componentes: o seu nome, a sua descrição, seus critérios de aceitação, o épico a qual pertence, a pontuação que ela recebeu no \textsl{Planning Poker Card}, a estimativa de tamanho conforme a sua pontuação e a sua prioridade conforme o seu tamanho e pontuação. Ainda com o fim de organizá-las foram separadas por meio dos seguintes épicos:
 
 \begin{itemize}
-\item {\textbf{Gestão de Perguntas:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de perguntas}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_perguntas} do apêndice.
-
-\def\arraystretch{2}
-\begin{quadro}[htb]
-\centering
-\ABNTEXfontereduzida
-\caption{Resumo: Gestão de perguntas}
-\label{resumo: gestão de perguntas}
-\resizebox{\linewidth}{!}{
-\begin{tabular}{|p{6.5cm}|c|c|c|}
-\hline
-\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
-\hline
-Criar uma pergunta & 13 & Grande & ALTA \\ \hline
-Curtir uma pergunta & 2 & Pequeno & ALTA \\ \hline
-Listagem de categorias & 5 & Médio & ALTA \\ \hline
-Editar uma pergunta & 5 & Médio & ALTA \\ \hline
-Deletar uma pergunta & 3 & Pequeno & ALTA \\ \hline
-Buscar perguntas & 2 & Pequeno & MÉDIA  \\ \hline
-Filtrar perguntas & 8 & Médio & MÉDIA \\ \hline
-Ordenação das perguntas & 5 & Médio & ALTA \\ \hline
-
-\end{tabular}}\legend{Fonte: Os autores}
-\end{quadro}
-\FloatBarrier 
-
-Como a primeira história a ser desenvolvida pela equipe se encontrava nesse épico, era necessário considerar também a configuração de ambiente, dessa forma, ele acabou recebendo uma estimava global de esforço maior, em relação aos outros, totalizando 43 pontos.
-
-\item {\textbf{Gestão de Respostas:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de respostas}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_respostas} do apêndice.
-
-\def\arraystretch{2}
-\begin{quadro}[htb]
-\centering
-\ABNTEXfontereduzida
-\caption{Resumo: Gestão de respostas}
-\label{resumo: gestão de respostas}
-\resizebox{\linewidth}{!}{
-\begin{tabular}{|p{6.5cm}|c|c|c|}
-\hline
-\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
-\hline
-Criar uma resposta & 5 & Médio & ALTA \\ \hline
-Curtir uma resposta & 1 & Pequeno & ALTA \\ \hline
-Listagem de categorias & 5 & Médio & ALTA \\ \hline
-Excluir uma pergunta & 3 & Pequeno & ALTA \\ \hline
-Editar uma resposta & 5 & Médio & ALTA \\ \hline
-Ordenação das respostas mais curtidas & 5 & Médio & ALTA \\ \hline
-
-\end{tabular}}\legend{Fonte: Os autores}
-\end{quadro}
-\FloatBarrier 
-
-Se tratando do segundo épico a ser trabalhado, a sua estimativa global de esforço foi menor em relação ao primeiro, mas nele ainda foi mantida a prioridade alta, dessa forma, o épico totalizou 24 pontos.
-    
 \item {\textbf{Gestão de Eventos:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de eventos}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_eventos} do apêndice.
 
 \def\arraystretch{2}
@@ -150,8 +96,8 @@ Se tratando do segundo épico a ser trabalhado, a sua estimativa global de esfor
 \thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
 \hline
 Criar e exibir evento & 3 & Pequeno & MÉDIA \\ \hline
+Editar eventos & 3 & Pequeno & ALTA \\ \hline
 Excluir eventos & 3 & Pequeno & ALTA \\ \hline
-Editar eventos & 3 & Pequeno & BAIXA \\ \hline
 Favoritar evento & 2 & Pequeno & MÉDIA \\ \hline
 Listagem de categorias & 5 & Médio & ALTA \\ \hline
 
@@ -159,55 +105,9 @@ Listagem de categorias & 5 & Médio & ALTA \\ \hline
 \end{quadro}
 \FloatBarrier 
 
-O épico totalizou 16 pontos, e suas histórias, em sua maioria, foram classificadas com tamanho pequeno devido à semelhança no desenvolvimento das histórias anteriores, dessa forma, foram denotadas como histórias de usuário nível fácil.
+O épico totalizou 16 pontos, e suas histórias, em sua maioria, foram classificadas com tamanho pequeno devido à semelhança no desenvolvimento das histórias, dessa forma, foram denotadas como histórias de usuário nível fácil.
 
-\item {\textbf{Gestão de Usuários:}} Para este épico foi destinada à história de usuário do \autoref{resumo: gestão de usuários}. Logo, seus devidos detalhes se encontram na \autoref{gestão_usuario} do apêndice.
-
-\def\arraystretch{2}
-\begin{quadro}[htb]
-\centering
-\ABNTEXfontereduzida
-\caption{Resumo: Gestão de usuários}
-\label{resumo: gestão de usuários}
-\resizebox{\linewidth}{!}{
-\begin{tabular}{|p{6.5cm}|c|c|c|}
-\hline
-\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
-\hline
-Autenticação do usuário & 5 & Médio & ALTA \\ \hline
-Verificação de e-mail & 8 & Médio & ALTA \\ \hline
-Exibição dos dados do usuário & 5 & Médio & ALTA \\ \hline
-Recuperação de senha & 5 & Médio & BAIXA \\ \hline
-Exibição do troféu e reputação & 13 & Grande & MÉDIA \\ \hline
-
-\end{tabular}}\legend{Fonte: Os autores}
-\end{quadro}
-\FloatBarrier 
-
-O épico é responsável pela gestão de usuários, no entanto, por conter histórias um pouco complexas, principalmente em relação a \gls{gamificação}, totalizou 36 pontos como estimativa de esforço. 
-
-\item {\textbf{Usabilidade:}} Para este épico foi destinada à história de usuário do \autoref{resumo: usabilidade}. Logo, seus devidos detalhes se encontram na \autoref{gestão_usabilidade} do apêndice.
-
-\def\arraystretch{2}
-\begin{quadro}[htb]
-\centering
-\ABNTEXfontereduzida
-\caption{Resumo: Usabilidade}
-\label{resumo: usabilidade}
-\resizebox{\linewidth}{!}{
-\begin{tabular}{|p{6.5cm}|c|c|c|}
-\hline
-\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
-\hline
-Internacionalização & 5 & Médio & ALTA \\ \hline
-
-\end{tabular}}\legend{Fonte: Os autores}
-\end{quadro}
-\FloatBarrier 
-
-O épico é responsável para classificar entregas relacionadas a usabilidade do sistema, sendo a única mapeada até o momento, criada para a entrega do valor de disponibilidade de tradução dos conteúdos em português e inglês. Logo, o épico totalizou 5 pontos como estimativa de esforço.
-
-\item {\textbf{Moderação:}} Para este épico foi destinada à história de usuário do \autoref{resumo: moderacao}. Logo, seus devidos detalhes se encontram na \autoref{gestão_moderacao} do apêndice.
+\item {\textbf{Moderação:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: moderacao}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_moderacao} do apêndice.
 
 \def\arraystretch{2}
 \begin{quadro}[htb]
@@ -220,14 +120,127 @@ O épico é responsável para classificar entregas relacionadas a usabilidade do
 \hline
 \thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
 \hline
-Denúncia & 5 & Médio & ALTA \\ \hline
+Denúncia de perguntas, respostas e eventos - back-end & 5 & Médio & ALTA \\ \hline
+Denúncia de perguntas, respostas e eventos - front-end & 5 & Médio & ALTA \\ \hline
+Exibir modal dos termos de uso - front-end & 5 & Médio & ALTA \\ \hline
+Exibir painel de denúncias & 8 & Médio & BAIXA \\ \hline
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+O épico é responsável por permitir que o \gls{friend} consiga reportar qualquer ato irregular em relação às normas da comunidade e visualize os termos de uso. Por outro lado, o épico também se direciona ao moderador, qual será responsável por tomar as devidas medidas para que atos irregulares não ocorram. O épico totalizou 23 pontos como estimativa de esforço. 
+
+\item {\textbf{Gestão de Perguntas:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de perguntas}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_perguntas} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Gestão de perguntas}
+\label{resumo: gestão de perguntas}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Adicionar tags & 3 & Pequeno & ALTA \\ \hline
+Buscar perguntas & 2 & Pequeno & MÉDIA  \\ \hline
+Contagem de visualização de perguntas & 5 & Médio & ALTA \\ \hline
+Criar uma pergunta & 13 & Grande & ALTA \\ \hline
+Curtir uma pergunta & 2 & Pequeno & ALTA \\ \hline
+Deletar uma pergunta & 3 & Pequeno & ALTA \\ \hline
+Editar uma pergunta & 5 & Médio & ALTA \\ \hline
+Filtrar perguntas & 8 & Médio & MÉDIA \\ \hline
+Listagem de categorias & 5 & Médio & ALTA \\ \hline
+Marcar pergunta como resolvida & 5 & Médio & MÉDIA \\ \hline
+Ordenação das perguntas & 5 & Médio & ALTA \\ \hline
 
 \end{tabular}}\legend{Fonte: Os autores}
 \end{quadro}
 \FloatBarrier 
 
-O épico é responsável por permitir que o \gls{friend} consiga reportar qualquer ato irregular em relação às normas da comunidade. Como o épico contava apenas com uma história, ele totalizou 5 pontos como estimativa de esforço. 
+Como a primeira história a ser desenvolvida pela equipe se encontrava nesse épico, era necessário considerar também a configuração de ambiente, dessa forma, ele acabou recebendo uma estimava global de esforço maior, em relação aos outros, totalizando 56 pontos.
 
+\item {\textbf{Gestão de Respostas:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de respostas}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_respostas} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Gestão de respostas}
+\label{resumo: gestão de respostas}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Aceitar uma resposta & 5 & Médio & MÉDIA \\ \hline
+Criar uma resposta & 5 & Médio & ALTA \\ \hline
+Curtir uma resposta & 1 & Pequeno & ALTA \\ \hline
+Editar uma resposta & 5 & Médio & ALTA \\ \hline
+Excluir uma pergunta & 3 & Pequeno & ALTA \\ \hline
+Listagem de categorias & 5 & Médio & ALTA \\ \hline
+Ordenação das respostas mais curtidas & 5 & Médio & ALTA \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+Se tratando do segundo épico a ser trabalhado, a sua estimativa global de esforço foi menor em relação ao primeiro, mas nele ainda foi mantida a prioridade alta, dessa forma, o épico totalizou 29 pontos.
+
+\item {\textbf{Usabilidade:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: usabilidade}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_usabilidade} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Usabilidade}
+\label{resumo: usabilidade}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Ajustas layout conforme novo protótipo & 5 & Médio & ALTA \\ \hline
+Exibir modal dos termos de uso & 5 & Médio & ALTA \\ \hline
+Internacionalização & 5 & Médio & ALTA \\ \hline
+
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+O épico é responsável por classificar entregas relacionadas a usabilidade do sistema. Logo, totalizou 15 pontos como estimativa de esforço.
+
+\item {\textbf{Gestão de Usuários:}} Para este épico foram destinadas às histórias de usuário do \autoref{resumo: gestão de usuários}. Logo, os devidos detalhes de cada história de usuário se encontram na \autoref{gestão_usuario} do apêndice.
+
+\def\arraystretch{2}
+\begin{quadro}[htb]
+\centering
+\ABNTEXfontereduzida
+\caption{Resumo: Gestão de usuários}
+\label{resumo: gestão de usuários}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|p{6.5cm}|c|c|c|}
+\hline
+\thead{História} & \thead{Pontuação} & \thead{Tamanho} & \thead{Prioridade}\\
+\hline
+Abas de criação no perfil & 5 & Médio & BAIXA \\ \hline
+Alteração de senha no perfil & 5 & Médio & BAIXA \\ \hline
+Autenticação do usuário & 5 & Médio & ALTA \\ \hline
+Edição dos dados no perfil & 5 & Médio & ALTA \\ \hline
+Exclusão do perfil & 8 & Médio & BAIXA \\ \hline
+Exibição e busca de usuários & 5 & Médio & ALTA \\ \hline
+Exibição do ranking de usuários & 5 & Médio & BAIXA \\ \hline
+Exibição do troféu e reputação & 13 & Grande & MÉDIA \\ \hline
+Exibição dos dados do usuário & 5 & Médio & ALTA \\ \hline
+Histórico de eventos favoritados & 5 & Médio & BAIXA \\ \hline
+Recuperação de senha & 5 & Médio & BAIXA \\ \hline
+Verificação de e-mail & 8 & Médio & ALTA \\ \hline
+\end{tabular}}\legend{Fonte: Os autores}
+\end{quadro}
+\FloatBarrier 
+
+O épico é responsável pela gestão de usuários, no entanto, por conter histórias um pouco complexas, principalmente em relação a \gls{gamificação}, totalizou 74 pontos como estimativa de esforço. 
 \end{itemize}
 
 %------------------------------------------------------------
@@ -248,8 +261,8 @@ Regras de negócio são requisitos de domínio de aplicação tratado no desenvo
 \hline
 \acs{RN}01 & Não serão permitidos usuários com os mesmos dados, ou seja, o sistema só permitirá a criação de uma conta por usuário \\
 \hline
-\acs{RN}02 & A fim de garantir a segurança de nossos usuários, o sistema deverá fazer uso de algumas diretrizes da Lei Marco Civil da Internet, lei n\textdegree 12.965/2014, que tem como objetivo estabelecer princípios, garantias, direitos e deveres para o uso da internet no Brasil. \\
-\hline
+% \acs{RN}02 & A fim de garantir a segurança de nossos usuários, o sistema deverá fazer uso de algumas diretrizes da Lei Marco Civil da Internet, lei n\textdegree 12.965/2014, que tem como objetivo estabelecer princípios, garantias, direitos e deveres para o uso da internet no Brasil. \\
+% \hline
 \acs{RN}03 & Dentro do direito a exclusão, ao excluir seu perfil, o usuário deve ter ciência de que suas perguntas e respostas serão mantidas na comunidade, porém como parte de um usuário anônimo (exemplo: user12345678). \\
 \hline
 \acs{RN}04 & O usuário deve levar em consideração as boas práticas para o desenvolvimento de uma pergunta (\autoref{boapergunta}).  \\
@@ -277,11 +290,10 @@ Dessa forma, no \autoref{Partes interessadas} foram representados os \textit{sta
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|c|c|p{9cm}|}
 \hline
-\thead{Nome} & \thead{Nível de influência} & \thead{Interesses e Expectativas}\\
-\hline
+\thead{Nome} & \thead{Nível de influência} & \thead{Interesses e expectativas}\\ \hline
+Coordenação e Direção & Médio & Regulação no uso adequado do sistema, ou seja, se ele satisfaz o que foi planejado. \\ \hline
 Discentes & Alto & Participar do fórum de perguntas e respostas, assim como gerenciar os eventos \\ \hline
 Docentes & Médio & Acompanhamento extracurricular das dificuldades relacionadas a respeito do conteúdo lecionado. \\ \hline
-Coordenação e Direção & Médio & Regulação no uso adequado do sistema, ou seja, se ele está cumprindo o que foi planejado inicialmente. \\ \hline
 Pais e responsáveis & Médio & Estar a par dos meios extracurriculares aderidos pela instituição. \\ \hline
 
 \end{tabular}}\legend{Fonte: Os autores}
@@ -299,14 +311,11 @@ Já por usuário, segundo \citeonline{BibEntry2017Oct}, são caracterizados aque
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|c|p{5cm}|p{7cm}|}
 \hline
-\thead{Nome} & \thead{Descrição} & \thead{Ações} \\
-\hline
-\glspl{friend} & Discentes que tenham interesse no fórum e nos eventos. & Este tipo de usuário pode visualizar, respoder, curtir, denunciar, cadastrar perguntas e respostas no fórum além de poder realizar as mesmas ações na seção de eventos. \\ 
-\hline
-Docentes & Professores que tenham interesse em realizar acompanhamento de seus alunos por meio do \gls{ifriends}. & Este tipo de usuário possui as mesmas ações que o tipo de usuário \glspl{friend}. \\ 
-\hline
-Usuários externos & Pessoas que desejem conhecer a comunidade e que não façam parte da instituição. & Este tipo de usuário terá apenas a possibilidade de visualizar páginas públicas. \\
-\hline
+\thead{Nome} & \thead{Descrição} & \thead{Ações} \\ \hline
+Docentes & Professores que tenham interesse em realizar acompanhamento de seus alunos por meio do \gls{ifriends}. & Este tipo de usuário consegue realizar as mesmas ações que o tipo de usuário \glspl{friend}. \\ \hline
+\glspl{friend} & Discentes que tenham interesse de participar do fórum de perguntas e contribuir na divulgação dos eventos. & Este tipo de usuário pode visualizar, respoder, curtir, denunciar, cadastrar perguntas e respostas no fórum além de poder realizar as mesmas ações na seção de eventos. \\ \hline
+Moderadores & Usuários responsáveis por manter a ordem na comunidade. & Atender a denúncias e tomar as devidas providências para ações mal-intencionadas. \\ \hline
+Usuários externos & Pessoas que desejem conhecer a comunidade e que não façam parte da instituição. & Este tipo de usuário terá apenas a possibilidade de visualizar páginas públicas. \\ \hline
 
 \end{tabular}}\legend{Fonte: Os autores}
 \end{quadro}

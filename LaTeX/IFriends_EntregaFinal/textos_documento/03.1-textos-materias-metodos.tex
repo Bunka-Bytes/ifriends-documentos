@@ -7,22 +7,22 @@ Segundo \citeonline{Junior:2010}, engenharia de \textsl{software} é ``um conjun
 Um método é uma prescrição explícita de como chegar a uma atividade requerida por um modelo de ciclo de vida, visando otimizar a execução das atividades que foram especificadas. Já as ferramentas proporcionam apoio automatizado ou semi-automatizado aos métodos \cite{Junior:2010}.
 \end{citacao}
 
-Ademais, \citeonline{Junior:2010} ainda separa os métodos de desenvolvimento de sistema em três categoriais que permitem visualizar e solucionar o problema de diferentes maneiras para sua modelagem. Para a composição do presente projeto, no entanto, será utilizado como método principal a metodologia escolhida para a gestão do projeto e as ferramentas poderão ou não ser relacionadas a mesma, como há de ser especificado nas próximas seções.
+Ademais, \citeonline{Junior:2010} ainda separa os métodos de desenvolvimento de sistema em três categoriais que permitem visualizar e solucionar o problema de diferentes maneiras para sua modelagem. Para a composição do presente projeto, no entanto, será utilizado como método principal a metodologia escolhida para a gestão do projeto e as ferramentas poderão ou não ser relacionadas a ela, como há de ser especificado nas próximas seções.
 
 %-------------------------------------------------------------
 \section{Ferramentas de desenvolvimento}
 %-------------------------------------------------------------
-Pensando no objetivo e alcance do projeto, foi optou-se pela criação de uma aplicação Web, que possa ser acessada de diferentes dispositivos de forma fácil, apenas tendo como requisito básico o acesso à Internet. Outros fatores considerados foram: a experiência da equipe com o formato, os recursos computacionais exigidos para tal desenvolvimento (sendo menores do que para desenvolvimento de aplicações móveis) e a maior disponibilidade de conteúdos gratuitos e de fácil acesso sobre desenvolvimento Web.
+Pensando no objetivo e alcance do projeto, optou-se pela criação de uma aplicação Web, que possa ser acessada de diferentes dispositivos de forma fácil, apenas tendo como requisito básico o acesso à Internet. Outros fatores considerados foram: a experiência da equipe com o formato, os recursos computacionais exigidos para tal desenvolvimento (sendo menores que para desenvolvimento de aplicações móveis) e a maior disponibilidade de conteúdos gratuitos e de fácil acesso sobre desenvolvimento Web.
 
-De modo a desenvolver essa aplicação, considerou-se o uso da biblioteca/ecossistema JavaScript, o ReactJs, como base para o \textsl{\gls{front-end}}, já as bibliotecas estilísticas que servem de auxílio são o \gls{react-bootstrap} e o \gls{ant}.
+De modo a desenvolver essa aplicação, considerou-se o uso da biblioteca/ecossistema JavaScript, o ReactJS com a pré-configuração do \gls{cra} para \gls{single-page}, como base para o \textsl{\gls{front-end}}, já as bibliotecas estilísticas que servem de auxílio são o \gls{react-bootstrap} e o \gls{ant}.
 
 Além disso, para a internacionalização, faz-se uso da biblioteca de uso livre, a  \href{https://www.i18next.com}{i18n}, escrita em JavaScript e disponível como uma dependência no ReactJs. Essa biblioteca possui muitas funcionalidades e possibilidades de uso, porém a utilizamos para internacionalizar o site, com ela é possível traduzir texto para idiomas diversos, escolher a linguagem padrão do navegador do usuário e várias outras possibilidades.
 
-Quanto ao banco de imagens da aplicação, utiliza-se o \href{https://pt-br.imgbb.com}{imgBB}, o qual é uma plataforma de hospedagem de imagens grátis, com ela é possível enviar uma requisição a \acs{api} do \href{https://pt-br.imgbb.com}{imgBB}, que junto de uma chave própria do usuário é possível fazer a inserção, edição, visualização e exclusão das fotos. Ele também fornece os \textsl{links} das imagens, o que possibilita o armazenamento no banco de dados apenas dos \textsl{links} das fotos enviadas pelo usuário.
+Quanto ao banco de imagens da aplicação, utiliza-se o \href{https://pt-br.imgbb.com}{imgBB}, o qual é uma plataforma de hospedagem de imagens grátis, com ela é possível enviar uma requisição a \acs{api} do \href{https://pt-br.imgbb.com}{imgBB}, que junto de uma chave própria do usuário é possível fazer a inserção, edição, visualização e exclusão das fotos. Ele também fornece os \textsl{links} das imagens, possibilitando o armazenamento no banco de dados apenas dos \textsl{links} das fotos enviadas pelo usuário.
 
-Para o \textsl{\gls{back-end}} foi considerada a linguagem Java, orientada a objetos; sua escolha foi feita pelo fato de a equipe já possuir experiência com a linguagem, além de alguns já trabalharem com ela; também possui uma boa maturidade, contendo muitas informações disponíveis para ajudar no desenvolvimento. Em conjunto, está em uso o \textit{Spring Boot}: \gls{framework2} Java de código aberto, aliado ao \gls{Maven} - para a automação e gerenciamento de dependências no projeto.  Já como padrão de desenvolvimento utilizado no  \textsl{\gls{back-end}}, foi aplicado o padrão \acs{mvc}, que separa o projeto em três principais camadas: \textit{model}, \textit{view} e \textit{controller}.
+Para o \textsl{\gls{back-end}} foi considerada a linguagem Java, orientada a objetos; sua escolha foi feita pelo fato de a equipe já possuir experiência com a linguagem, além de alguns já trabalharem com ela e de também possuir uma grande comunidade ativa que disponibiliza conteúdos gratuitos que podem ajudar no desenvolvimento. Em conjunto, está em uso o \textit{Spring Boot}: \gls{framework2} Java de código aberto, aliado ao \gls{Maven} - para a automação e gerenciamento de dependências no projeto.  Já como padrão de desenvolvimento utilizado no  \textsl{\gls{back-end}}, foi aplicado o padrão \acs{mvc}, que separa o projeto em três principais camadas: \textit{model}, \textit{view} e \textit{controller}.
 
-No entanto, como arquitetura de sistema (\autoref{Arquitetura_Rest_API}), foi escolhido utilizar a arquitetura \gls{REST API} na qual é possível separar o código \textsl{\gls{back-end}} do \textsl{\gls{front-end}} de maneira que as duas aplicações possam determinar a troca informações entre elas com requisições via protocolo \acs{http}. Esta solução também é útil para escalonar a plataforma, já que a utilização de uma \acs{api} pode ser feita tanto por aplicações móveis, como para a Web.
+No entanto, como arquitetura de sistema (\autoref{Arquitetura_Rest_API}), foi escolhido utilizar a arquitetura \gls{REST API} na qual é possível separar o código \textsl{\gls{back-end}} do \textsl{\gls{front-end}} de maneira que as duas aplicações possam determinar a troca informações entre elas com requisições via protocolo \acs{http}. Esta solução também pode ser útil para escalonar a plataforma, já que a utilização de uma \acs{api} pode ser feita tanto por aplicações móveis, como para a Web.
 
 \begin{figure}[htb]
 \centering
@@ -35,7 +35,7 @@ No entanto, como arquitetura de sistema (\autoref{Arquitetura_Rest_API}), foi es
 
 Quanto ao banco de dados, foi utilizado o \gls{postegreSQL}: um \acs{sgbd} popular de \acs{sql}, que serve para executar comandos no banco, como consultas, e alterações nos dados ou na estrutura.
 
-Para hospedar a aplicação, a equipe utiliza o \gls{heroku} para hospedagem da \acs{api} e o \gls{vercel} para a interface de usuário, sendo ambos plataformas em nuvem que suportam diversas linguagens de programação e permitem a implantação, escalonamento e gerenciamento do sistema.
+Para hospedar a aplicação, a equipe utiliza o \gls{heroku} para hospedagem da \acs{api} e o \gls{vercel} para a interface de usuário, sendo ambas plataformas em nuvem que suportam diversas linguagens de programação e permitem a implantação, escalonamento e gerenciamento do sistema.
 
 %-------------------------------------------------------------
 \section{Ferramentas de apoio}
@@ -43,7 +43,7 @@ Para hospedar a aplicação, a equipe utiliza o \gls{heroku} para hospedagem da 
 Nesta seção serão especificadas as ferramentas a serem utilizadas para a estruturação e organização do sistema Web.
 
 \begin{itemize}
-\item \textbf{Notion}: Foi escolhido como plataforma de organização de projetos, pois este possui métodos de gerenciamento de equipe, fornecendo uma interface para vários desenvolvedores trabalharem utilizando o quadro de kanban, assim como o compartilhamento de arquivos, vídeos e artigos; permitindo também notificações via e-mail sobre atualizações do projeto e de reuniões marcadas, por exemplo. 
+\item \textbf{Notion}: Foi escolhido como plataforma de organização de projetos, pois este possui métodos de gerenciamento de equipe, fornecendo uma interface para vários desenvolvedores trabalharem utilizando o quadro de kanban, assim como o compartilhamento de arquivos, vídeos e artigos; permitindo também notificações via e-mail sobre atualizações do projeto e de reuniões marcadas, por exemplo. O quadro com todo planejamento utilizado pela equipe pode ser visto em \href{encurtador.com.br/cjvT4}{encurtador.com.br/cjvT4}.
     
 \item \textbf{Discord}: Plataforma de comunicação online escolhida, por ser a mais utilizada e conhecida pelos membros da equipe. Nela é possível criar servidores privados para compartilhar informações e realizar reuniões sobre o projeto.
     
